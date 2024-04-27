@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean class="springs_hibernate_xml3.dto.Person" id="per">
+		<property name="id" value="3"></property>
+		<property name="name" value="Aditya"></property>
+		<property name="phone" value="8785412225"></property>
+		<property name="address" value="Satara"></property>
+	</bean>
+	<bean class="springs_hibernate_xml3.dto.BankAccount" id="bank">
+		<property name="id" value="106"></property>
+		<property name="name" value="Axix"></property>
+		<property name="ifsc" value="axis@512"></property>
+		<property name="balance" value="60000"></property>
+		<property name="person" ref="per"></property>
+	</bean>
+	<bean class="springs_hibernate_xml3.dto.BankAccount" id="bank2">
+		<property name="id" value="107"></property>
+		<property name="name" value="Union"></property>
+		<property name="ifsc" value="union@125"></property>
+		<property name="balance" value="90000"></property>
+		<property name="person" ref="per"></property>
+	</bean>
+	<bean class="springs_hibernate_xml3.dto.BankAccount" id="bank3">
+		<property name="id" value="108"></property>
+		<property name="name" value="Shahu"></property>
+		<property name="ifsc" value="shahu@125"></property>
+		<property name="balance" value="12000"></property>
+		<property name="person" ref="per"></property>
+	</bean>
+	<bean class="springs_hibernate_xml3.dto.BankAccount" id="bank4">
+		<property name="id" value="109"></property>
+		<property name="name" value="SBI"></property>
+		<property name="ifsc" value="sbi@125"></property>
+		<property name="balance" value="190000"></property>
+		<property name="person" ref="per"></property>
+	</bean>
+	
+	<bean class="springs_hibernate_xml3.dao.PersonDao" id="dao"></bean>
+
+</beans>
